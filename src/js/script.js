@@ -1,10 +1,10 @@
-let show = true ? "hidden" : "initial";
+let show = true;
 
 const menuSection = document.querySelector(".menu-mobile")
 const menuToggle = menuSection.querySelector(".menu-toggle")
 
 const hideAndShow = () => {
-	document.body.style.overflow = show;
+	document.body.style.overflow = show ? "hidden" : "initial";;
 
 	menuSection.classList.toggle("on", show)
 	show = !show;

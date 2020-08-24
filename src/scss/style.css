@@ -652,6 +652,9 @@ footer .footer-menus a:hover {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
   }
   body header .header-fixed .row .div-search {
     padding-top: 1rem;
@@ -665,9 +668,12 @@ footer .footer-menus a:hover {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   body header .header-menu {
     display: none;
@@ -691,12 +697,17 @@ footer .footer-menus a:hover {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    padding: 0px 30px 0 15px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
-  .menu-mobile .line {
+  .menu-mobile .menu-toggle {
+    cursor: pointer;
+  }
+  .menu-mobile .menu-toggle .line {
     background-color: #4f4f4f;
     width: 30px;
     height: 2px;
@@ -712,8 +723,22 @@ footer .footer-menus a:hover {
     height: 100% !important;
     background-color: #e0e0e0;
     z-index: 100;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 1rem;
   }
   .menu-mobile.on .menu-toggle {
+    position: absolute;
+    top: 49px;
+    right: 17px;
+    width: 45px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -726,15 +751,15 @@ footer .footer-menus a:hover {
             align-items: flex-end;
   }
   .menu-mobile.on .menu-toggle .line-one {
-    -webkit-transform: rotate(45deg) translate(55px, 51px);
-            transform: rotate(45deg) translate(55px, 51px);
+    -webkit-transform: rotate(45deg) translate(12px, 23px);
+            transform: rotate(45deg) translate(12px, 23px);
   }
   .menu-mobile.on .menu-toggle .line-two {
     opacity: 0;
   }
   .menu-mobile.on .menu-toggle .line-three {
-    -webkit-transform: rotate(-45deg) translate(-20px, 23px);
-            transform: rotate(-45deg) translate(-20px, 23px);
+    -webkit-transform: rotate(-45deg) translate(7px, -19px);
+            transform: rotate(-45deg) translate(7px, -19px);
   }
   .menu-mobile.on .menu-mob {
     display: block !important;
