@@ -4,7 +4,7 @@ const menuSection = document.querySelector(".menu-mobile")
 const menuToggle = menuSection.querySelector(".menu-toggle")
 
 const hideAndShow = () => {
-	document.body.style.overflow = !show;
+	document.body.style.overflow = show;
 
 	menuSection.classList.toggle("on", show)
 	show = !show;
